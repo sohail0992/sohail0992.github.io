@@ -11,7 +11,7 @@
     "address":{
       "city":"Peshawar, Pakistan"
     },
-    "website": "http://www.timbakerdev.com",
+    "website": "https://sohail0992.github.io",
     "resumedownload":"https://www.overleaf.com/project/5c07a6dbc00ee27991fc598a/output/output.pdf?compileGroup=standard&clsiserverid=clsi-pre-emp-mkg6&popupDownload=true",
     "social":[
       {
@@ -111,36 +111,6 @@
   },
   "portfolio":{
     "projects": [
-      {
-        "title":"Regim",
-        "category":"Food APP",
-        "image":"regim.jpg",
-        "url":"https://play.google.com/store/apps/details?id=app.regime.com"
-      },
-      {
-        "title":"Fury Fighting Gear",
-        "category":"(offline now) A fighting gear company I started",
-        "image":"fury-fighting-gear.jpg",
-        "url":"http://www.timbakerdev.com"
-      },
-      {
-        "title":"Original Thai Food",
-        "category":"Website I built for a restaurant I like in Thailand",
-        "image":"original-thai-food.jpg",
-        "url":"http://www.timbakerdev.com/originalthaifood.github.io"
-      },
-      {
-        "title":"Resume Website",
-        "category":"A React based resume website template",
-        "image":"resume-website.jpg",
-        "url":"http://www.timbakerdev.com"
-      },
-      {
-        "title":"Smirkspace",
-        "category":"(MVP Only) A React and Meteor based chat University project.",
-        "image":"smirkspace.jpg",
-        "url":"http://www.smirkspace.com"
-      }
     ]
   },
   "testimonials":{
