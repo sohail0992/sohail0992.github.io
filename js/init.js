@@ -140,24 +140,29 @@
    $('form#contactForm button.submit').click(function() {
 
       $('#image-loader').fadeIn();
-
+      var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
       var contactName = $('#contactForm #contactName').val();
       var contactEmail = $('#contactForm #contactEmail').val();
       var contactSubject = $('#contactForm #contactSubject').val();
       var contactMessage = $('#contactForm #contactMessage').val();
 
-      var data = 'contactName=' + contactName + '&contactEmail=' + contactEmail +
-               '&contactSubject=' + contactSubject + '&contactMessage=' + contactMessage;
-
+      var data = {
+         "from": emailReg.test(contactEmail) || "sohail9099@gmail.com",
+         "to": "msohail.se@gmail.com",
+         "subject":  contactSubject || "No Subject",
+         "text": contactName || '' + ' ' + contactMessage || ' '
+      }
+      debugger;
       $.ajax({
-
 	      type: "POST",
-	      url: "inc/sendEmail.php",
-	      data: data,
+	      url: "https://email-microservice-p.herokuapp.com/send-email",
+	      data: JSON.stringify(data),
+         contentType: "application/json; charset=utf-8",
+         traditional: true,
 	      success: function(msg) {
 
             // Message was sent
-            if (msg == 'OK') {
+            if (msg.success === true) {
                $('#image-loader').fadeOut();
                $('#message-warning').hide();
                $('#contactForm').fadeOut();
