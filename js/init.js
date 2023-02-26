@@ -147,12 +147,11 @@
       var contactMessage = $('#contactForm #contactMessage').val();
 
       var data = {
-         "from": emailReg.test(contactEmail) || "sohail9099@gmail.com",
+         "from": emailReg.test(contactEmail) ? contactEmail : "sohail9099@gmail.com",
          "to": "msohail.se@gmail.com",
          "subject":  contactSubject || "No Subject",
          "text": contactName || '' + ' ' + contactMessage || ' '
       }
-      debugger;
       $.ajax({
 	      type: "POST",
 	      url: "https://email-microservice-p.herokuapp.com/send-email",
@@ -160,7 +159,6 @@
          contentType: "application/json; charset=utf-8",
          traditional: true,
 	      success: function(msg) {
-
             // Message was sent
             if (msg.success === true) {
                $('#image-loader').fadeOut();
