@@ -150,7 +150,7 @@
          "from": emailReg.test(contactEmail) ? contactEmail : "sohail9099@gmail.com",
          "to": "msohail.se@gmail.com",
          "subject":  contactSubject || "No Subject",
-         "text": contactName || '' + ' ' + contactMessage || ' '
+         "text": contactName  + ' ' + contactMessage
       }
       $.ajax({
 	      type: "POST",
