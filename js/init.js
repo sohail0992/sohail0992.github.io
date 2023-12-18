@@ -154,7 +154,7 @@
       }
       $.ajax({
 	      type: "POST",
-	      url: "https://email-microservice-p.herokuapp.com/send-email",
+	      url: "http://13.51.242.9:3000/send-email",
 	      data: JSON.stringify(data),
          contentType: "application/json; charset=utf-8",
          traditional: true,
